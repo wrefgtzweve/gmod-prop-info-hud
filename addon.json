@@ -1,0 +1,13 @@
+{
+    "title": "Prop info hud",
+    "description": "Hud prop info allows you to see certain stats such as rotation and color when looking at entities.",
+    "type": "tool",
+    "tags": [
+        "fun",
+        "build"
+    ],
+    "ignore": [
+        ".git/*",
+        "README.md"
+    ]
+}

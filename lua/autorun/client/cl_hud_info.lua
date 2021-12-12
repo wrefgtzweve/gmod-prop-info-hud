@@ -19,7 +19,12 @@ hook.Add( "HUDPaint", "HudInfoAddon", function()
     local owner
     local ownerColor = Color( 255, 255, 255 )
     local ent = eyeTrace.Entity
-    local ownerEnt = ent:CPPIGetOwner() or ent:GetOwner()
+    local ownerEnt
+    if not CPPI then
+        ownerEnt = ent:CPPIGetOwner()
+    else
+        ownerEnt = ent:GetOwner()
+    end
 
     if ownerEnt:IsPlayer() then
         owner = ownerEnt:GetName()

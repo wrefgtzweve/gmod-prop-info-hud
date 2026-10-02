@@ -26,7 +26,7 @@ hook.Add( "HUDPaint", "HudInfoAddon", function()
         ownerEnt = ent:GetOwner()
     end
 
-    if ownerEnt:IsPlayer() then
+    if IsValid( ownerEnt ) and ownerEnt:IsPlayer() then
         owner = ownerEnt:GetName()
         ownerColor = team.GetColor( ownerEnt:Team() )
     else
